@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./font_dpf8aey9dxa/iconfont.css">
+    <link rel="stylesheet" href="./swiper/swiper-bundle.css">
+    <script src="./swiper/swiper-bundle.js"></script>
+</head>
+<body>
+    <header>
+        <div class="title">
+            <img src="./img/log.png" alt="">
+
+            <div class="inp">
+                <span class="iconfont icon-fangdajing
+                "></span>
+                <input type="text" placeholder="搜索药品、症状、品牌">
+                <!-- <span class="iconfont icon-saomiao"></span> -->
+            </div>
+
+            <div class="span_box">
+                <span class="iconfont icon-wode"></span>
+            </div>
+
+        </div>
+
+        <ul>
+            <li><span>首页</span></li>
+            <li><span>智能</span></li>
+            <li><span>电视</span></li>
+            <li><span>家电</span></li>
+            <li><span>笔记本</span></li>
+        </ul>
+    </header>
+
+
+    <section>
+        <!-- 轮播图 -->
+        <div class="tu">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./img/lun01.webp" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/lun02.webp" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/lun03.webp" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/lun04.webp" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/lun05.webp" alt=""></div>
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+                
+                <!-- 如果需要导航按钮 -->
+                <!-- <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> -->
+                
+                <!-- 如果需要滚动条 -->
+                <!-- <div class="swiper-scrollbar"></div> -->   
+            </div>
+
+
+            <script>        
+                var mySwiper = new Swiper ('.swiper', {
+                  direction: 'horizontal', // 垂直切换选项
+                  loop: true, // 循环模式选项
+                  autoplay:true,//等同于以下设置
+                  
+                  // 如果需要分页器
+                  pagination: {
+                    el: '.swiper-pagination',
+                  },
+                  
+                  // 如果需要前进后退按钮
+                  navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                  },
+                  
+                  // 如果需要滚动条
+                  scrollbar: {
+                    el: '.swiper-scrollbar',
+                  },
+                autoplay: {
+                   delay: 1000,
+                  stopOnLastSlide: false,
+                  disableOnInteraction: true,
+                   },
+                })       
+            </script>
+
+
+        </div>
+
+        <!-- 中间部分 -->
+        <div class="ro">
+            <div>
+                <img src="./img/b1.webp" alt="">
+            </div>
+            <div><img src="./img/b2.webp" alt=""></div>
+            <div><img src="./img/b3.webp" alt=""></div>
+            <div><img src="./img/b4.webp" alt=""></div>
+            <div><img src="./img/b5.webp" alt=""></div>
+            <div><img src="./img/b6.webp" alt=""></div>
+            <div><img src="./img/b7.png" alt=""></div>
+            <div><img src="./img/b8.png" alt=""></div>
+            <div><img src="./img/b9.webp" alt=""></div>
+            <div><img src="./img/b10.png" alt=""></div>
+        </div>
+
+        <!-- 商品上面的图片 -->
+        <div class="cell">
+            <div class="lef"><img src="./img/left.webp" alt=""></div>
+            <div class="rig">
+                <img src="./img/rig1.webp" alt="">
+                <img src="./img/rig2.webp" alt="">
+            </div>
+        </div>
+        
+        <!-- 商品内容 -->
+        <div class="cart">
+            
+        </div>
+
+
+        <!-- 查看更多 -->
+        <div class="completed">
+            更多小米手机产品 >
+        </div>
+    </section>
+
+
+
+    <footer>
+        <!-- <div class="fo">
+            <div>
+                <span class="iconfont icon-shouye"></span>
+                <p>首页</p>
+            </div>
+            <div>
+                <span class="iconfont icon-kehufuwu"></span>
+                <p>人工客服</p>
+            </div>
+            <div>
+                <span class="iconfont icon-ziyuan"></span>
+                <p>购物车</p>
+            </div>
+            <div>
+                <span class="iconfont icon-wode"></span>
+                <p>我的</p>
+            </div>
+          </div>   -->
+    </footer>
+
+    <script src="./template/art-template.js"></script>
+
+
+    <script type="text/html" id="cart">
+        {{ each list v,i }}
+        <div class="cart-box" data-id="{{ v.id }}">
+            <img src="{{ v.url }}" alt="">
+            <p class="name">{{ v.text1 }}</p>
+            <p class="shows">{{ v.text2 }}</p>
+            <p class="price">￥{{ v.price }}起</p>
+            <div class="mauto">立即购买</div>
+        </div>
+        {{ /each }}
+    </script>
+
+
+    <script type="text/html" id="fo">
+        <div class="fo">
+            <div>
+                <span class="iconfont icon-shouye"></span>
+                <p>首页</p>
+            </div>
+            <div>
+                <span class="iconfont icon-kehufuwu"></span>
+                <p>人工客服</p>
+            </div>
+            <div class="car-s">
+                <span class="iconfont icon-ziyuan"></span>
+                <p>购物车</p>
+                <em class="cart-num">{{ cartLength }}</em>
+            </div>
+            <div>
+                <span class="iconfont icon-wode"></span>
+                <p>我的</p>
+            </div>
+          </div>  
+    </script>
+
+    <script src="./data/data.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

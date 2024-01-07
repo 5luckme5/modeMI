@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./font_dpf8aey9dxa/iconfont.css">
+    <link rel="stylesheet" href="./css/shopping.css">
+    <link rel="stylesheet" href="./swiper/swiper-bundle.css">
+    <script src="./swiper/swiper-bundle.js"></script>
+</head>
+<body>
+    <header>
+        <div class="blak"><span class="iconfont icon-fanhui"></span></div>
+
+        <ul class="">
+            <li class="chosen">商品</li>
+            <li>评价</li>
+            <li>详情</li>
+            <li>推荐</li>
+        </ul>
+
+        <div><span class="iconfont icon-yaoqing"></span></div>
+    </header>
+
+    
+    <section>
+        <!-- 轮播图 -->
+        <div class="tu">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./img/shop01.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/shop02.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/shop03.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/shop04.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/shop05.jpg" alt=""></div>
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+                
+                <!-- 如果需要导航按钮 -->
+                <!-- <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> -->
+                
+                <!-- 如果需要滚动条 -->
+                <!-- <div class="swiper-scrollbar"></div> -->   
+            </div>
+
+
+            <script>        
+                var mySwiper = new Swiper ('.swiper', {
+                  direction: 'horizontal', // 垂直切换选项
+                  loop: true, // 循环模式选项
+                  autoplay:true,//等同于以下设置
+                  
+                  // 如果需要分页器
+                  pagination: {
+                    el: '.swiper-pagination',
+                  },
+                  
+                  // 如果需要前进后退按钮
+                  navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                  },
+                  
+                  // 如果需要滚动条
+                  scrollbar: {
+                    el: '.swiper-scrollbar',
+                  },
+                autoplay: {
+                   delay: 1000,
+                  stopOnLastSlide: false,
+                  disableOnInteraction: true,
+                   },
+                })       
+            </script>
+        </div>
+
+        <!-- 价格 -->
+        <div class="ption">
+            <div class="ption-box">
+                <h2>￥2099</h2>
+                <div class="bac">
+                    <div>预计获得245米金</div>
+                    <p>更多优惠</p>
+                </div>
+                <h3>Redmi Note 12 Turbo</h3>
+                <p>① 【性能狂飙】第二代骁龙7+ 性能芯，旗舰体验超速普及</p>
+                <p>② 【超细四窄边】OLED 柔性直屏，好看更护眼</p>
+                <p>③ 【快拍防抖相机】防抖+快拍，一举两得</p>
+            </div>
+        </div>
+
+        <!-- 活动 -->
+        <div class="events">
+            <div class="events-box">
+                <p>活动</p>
+                <p>加19.9元得建议零售价99元Redmi Note 12 ...</p>
+                <img src="./img/arrow_right.png" alt="">
+            </div>
+        </div>
+
+
+        <!-- 配送 -->
+        <div class="delivery">
+            <div class="delivery-box">
+                <div class="top">
+                    <p>配送</p>
+                    <div>
+                        <img src="./img/selected_address_icon.png" alt="">
+                        <p>北京 北京市 海淀区 清河街道 </p>
+                    </div>
+                    <img src="./img/arrow_right.png" alt="">
+                </div>
+
+                <div class="bom">
+                    <p>有现货</p>
+                    <img src="./img/delivery_info_icon.png" alt="">
+                    <p>今天23点前付款，预计13月32日送达</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="details">
+            <img src="./img/a01.jpg" alt="">
+            <img src="./img/a02.jpg" alt="">
+            <img src="./img/a03.png" alt="">
+            <img src="./img/a04.jpg" alt="">
+            <img src="./img/a05.jpg" alt="">
+        </div>
+
+        <!-- 为你推荐 -->
+        <div class="suggest">
+            <h2>为你推荐</h2>
+            <div class="cart">
+                <div class="cart-box" data-id="{{ v.id }}">
+                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202304171628_6486482f87e32aa3b03cfab5928831b0.jpg?thumb=1&q=90&w=344&h=280" alt="">
+                    <p class="name">Xiaomi 13 Ultra</p>
+                    <p class="shows">【影像】徕卡光学全焦段四摄，徕卡一英寸可变光圈主摄</p>
+                    <p class="price">￥5099起</p>
+                    <div class="mauto">立即购买</div>
+                </div>
+
+                <div class="cart-box" data-id="{{ v.id }}">
+                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202304171628_6486482f87e32aa3b03cfab5928831b0.jpg?thumb=1&q=90&w=344&h=280" alt="">
+                    <p class="name">Xiaomi 13 Ultra</p>
+                    <p class="shows">【影像】徕卡光学全焦段四摄，徕卡一英寸可变光圈主摄</p>
+                    <p class="price">￥5099起</p>
+                    <div class="mauto">立即购买</div>
+                </div>
+
+                <div class="cart-box" data-id="{{ v.id }}">
+                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202304171628_6486482f87e32aa3b03cfab5928831b0.jpg?thumb=1&q=90&w=344&h=280" alt="">
+                    <p class="name">Xiaomi 13 Ultra</p>
+                    <p class="shows">【影像】徕卡光学全焦段四摄，徕卡一英寸可变光圈主摄</p>
+                    <p class="price">￥5099起</p>
+                    <div class="mauto">立即购买</div>
+                </div>
+
+                <div class="cart-box" data-id="{{ v.id }}">
+                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202304171628_6486482f87e32aa3b03cfab5928831b0.jpg?thumb=1&q=90&w=344&h=280" alt="">
+                    <p class="name">Xiaomi 13 Ultra</p>
+                    <p class="shows">【影像】徕卡光学全焦段四摄，徕卡一英寸可变光圈主摄</p>
+                    <p class="price">￥5099起</p>
+                    <div class="mauto">立即购买</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <!-- <div class="ftr">
+            <div class="fon">
+                <span class="iconfont icon-kehufuwu"></span>
+                <p>客服</p>
+            </div>
+            <div class="fon">
+                <span class="iconfont icon-ziyuan"></span>
+                <p>购物车</p>
+                <em>0</em>
+            </div>
+            <div class="box">加入购物车</div>
+            <div class="box">立即购买</div>
+        </div> -->
+    </footer>
+
+    <script src="./template/art-template.js"></script>
+
+    <script type="text/html" id="pt">
+
+        <div class="ption-box">
+            <h2>￥{{ goods.price }}</h2>
+            <div class="bac">
+                <div>预计获得245米金</div>
+                <p>更多优惠</p>
+            </div>
+            <h3>{{ goods.text1 }}</h3>
+            <p>① {{ goods.text2 }}</p>
+            <p>② {{ goods.text3 }}</p>
+            <p>③ {{ goods.text4 }}</p>
+        </div>
+
+    </script>
+
+    <script type="text/html" id="ft">
+        <div class="ftr">
+            <div class="fon">
+                <span class="iconfont icon-kehufuwu"></span>
+                <p>客服</p>
+            </div>
+            <div class="fon">
+                <span class="iconfont icon-ziyuan"></span>
+                <p>购物车</p>
+                <em>{{ numberAll }}</em>
+            </div>
+            <div class="box" data-id="{{ id }}">加入购物车</div>
+            <div class="box-a">立即购买</div>
+        </div>
+    </script>
+
+    <script src="./data/data.js"></script>
+    <script src="./js/shop.js"></script>
+</body>
+</html>

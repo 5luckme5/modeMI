@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./font_dpf8aey9dxa/iconfont.css">
+    <link rel="stylesheet" href="./css/cart.css">
+</head>
+<body>
+    <header>
+        <img src="./img/icon_arrow_left_black.png" alt="" class="blak">
+        <h1>购物车</h1>
+        <p class="edit">编辑</p>
+    </header>
+
+    <section>
+        <div class="den">
+            <p>登录后享受更多优惠</p>
+            <div>
+                <p>去登陆</p>
+                <img src="./img/arrow_right.png" alt="">
+            </div>
+        </div>
+
+        <div class="cart">
+            <!-- <div class="tit">
+                <input type="checkbox" >
+                <p>小米自营</p>
+            </div>
+            <div class="box">
+                <input type="checkbox" >
+                <div class="ri">
+                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202303281131_cf3ff6ce70177560f3b9f95bd48fc575.jpg?thumb=1&q=90&w=344&h=280" alt="">
+                    <div class="text">
+                        <p>Xiaomi 14</p>
+                        <p>【性能狂飙】第二代骁龙7+ 性能芯，旗舰体验超速普及</p>
+                        <p>￥1899</p>
+                    </div>
+                </div>
+    
+                <div class="num">
+                    
+                        <button {{ v.number == 1 && 'disabled' }} class="sub" data-id="{{ v.id }}">-</button>
+                        <input type="text" value="1">
+                        <button class="add" data-id="{{ v.id }}">+</button>
+                    
+                </div>
+    
+            </div> -->
+
+
+
+        <!-- <div class="not">
+            <img src="./img/no_result_mi_cart.png" alt="">
+            <p>购物车还是空的</p>
+        </div> -->
+
+        </div>
+
+        
+
+
+
+        <!-- 为你推荐 -->
+        <div class="suggest">
+            <h2>为你推荐</h2>
+            <div class="cart-a">
+                <div class="cart-box" data-id="{{ v.id }}">
+                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202304171628_6486482f87e32aa3b03cfab5928831b0.jpg?thumb=1&q=90&w=344&h=280" alt="">
+                    <p class="name">Xiaomi 13 Ultra</p>
+                    <p class="shows">【影像】徕卡光学全焦段四摄，徕卡一英寸可变光圈主摄</p>
+                    <p class="price">￥5099起</p>
+                    <div class="mauto">立即购买</div>
+                </div>
+
+                <div class="cart-box" data-id="{{ v.id }}">
+                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202304171628_6486482f87e32aa3b03cfab5928831b0.jpg?thumb=1&q=90&w=344&h=280" alt="">
+                    <p class="name">Xiaomi 13 Ultra</p>
+                    <p class="shows">【影像】徕卡光学全焦段四摄，徕卡一英寸可变光圈主摄</p>
+                    <p class="price">￥5099起</p>
+                    <div class="mauto">立即购买</div>
+                </div>
+
+                <div class="cart-box" data-id="{{ v.id }}">
+                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202304171628_6486482f87e32aa3b03cfab5928831b0.jpg?thumb=1&q=90&w=344&h=280" alt="">
+                    <p class="name">Xiaomi 13 Ultra</p>
+                    <p class="shows">【影像】徕卡光学全焦段四摄，徕卡一英寸可变光圈主摄</p>
+                    <p class="price">￥5099起</p>
+                    <div class="mauto">立即购买</div>
+                </div>
+
+                <div class="cart-box" data-id="{{ v.id }}">
+                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202304171628_6486482f87e32aa3b03cfab5928831b0.jpg?thumb=1&q=90&w=344&h=280" alt="">
+                    <p class="name">Xiaomi 13 Ultra</p>
+                    <p class="shows">【影像】徕卡光学全焦段四摄，徕卡一英寸可变光圈主摄</p>
+                    <p class="price">￥5099起</p>
+                    <div class="mauto">立即购买</div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+    
+
+    <footer>
+        <div class="fo">
+            <div class="tet">
+                <h2>合计</h2>
+                <p>￥0</p>
+            </div>
+
+            <div class="billing">结算</div>
+
+        </div>  
+
+
+          
+    </footer>
+
+
+    <div class="manage " >
+        <!-- <div class="le">
+            <input type="checkbox" >
+            <p>全选</p>
+        </div>
+        <div class="ig">删除</div> -->
+    </div>
+
+
+    <script src="./template/art-template.js"></script>
+
+    <script type="text/html" id="ca">
+        {{if list.length}}
+        
+        <div class="tit">
+            <input type="checkbox" class="all" {{ selectAll && 'checked' }}>
+            <p>小米自营</p>
+        </div>
+        {{ each list v,i }}
+        <div class="box">
+            <input data-id="{{ v.id }}" type="checkbox" class="select-item" {{ v.isSelect && 'checked' }}>
+            <div class="ri">
+                <img src="{{ v.url }}" alt="" class="shang" data-id="{{ v.id }}">
+                <div class="text">
+                    <p>{{ v.text1 }}</p>
+                    <p>{{ v.text2 }}</p>
+                    <p>￥{{ v.price }}</p>
+                </div>
+            </div>
+
+            <div class="num">
+                
+                    <button {{ v.number == 1 && 'disabled' }} class="sub" data-id="{{ v.id }}">-</button>
+                    <input type="text" value="{{ v.number }}">
+                    <button class="add" data-id="{{ v.id }}">+</button>
+                
+            </div>
+
+        </div>
+        {{ /each }}
+
+        {{ else }}
+        <div class="not">
+            <img src="./img/no_result_mi_cart.png" alt="">
+            <p>购物车还是空的</p>
+        </div>
+        {{ /if }}
+    </script>
+
+    <script type="text/html" id="man">
+        <div class="le">
+            <input type="checkbox" class="all" {{ selectAll && list.length && 'checked' }}>
+            <p>全选</p>
+        </div>
+        <div class="ig">删除</div>
+    </script>
+
+    <script type="text/html" id="fo">
+        <div class="fo">
+            <div class="tet">
+                <h2>合计</h2>
+                <p>￥{{ totalPrice }}</p>
+            </div>
+
+            <div class="billing">结算</div>
+
+        </div>  
+    </script>
+
+
+
+
+    <script src="./js/cart.js"></script>
+</body>
+</html>

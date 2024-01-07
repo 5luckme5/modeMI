@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,li{
+    list-style: none;
+}
+html,body{
+    /* 100px = 26.67vw = 1rem */
+    /* 使用rem为单位 */
+    font-size: 26.67vw;
+    overflow-x: hidden;
+}
+body{
+    font-size: 0.12rem;
+    
+}
+header{
+    height: 0.5rem;
+    width: 90%;
+    margin: 0.05rem auto; 
+}
+header>.title{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+header>.title>img{
+    width: 0.4rem;
+}
+header .inp{
+    width: 70%;
+    height: 90%;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid #333;
+    display: flex;
+    align-content: center;
+}
+.inp>input{
+    /* transform: translate(-0.6rem,0rem); */
+    border-radius: 0rem 0.2rem 0.2rem 0rem;
+    border: none;
+    outline: none;
+    margin-left: 0.1rem;
+    font-size: 0.14rem;
+}   
+.inp>span{
+    transform: translate(0.08rem,0.1rem);
+    font-size: 0.2rem;
+}
+.span_box>span{
+    font-size: 0.24rem;
+}
+header>ul{
+    width: 80%;
+    height: 0.35rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 0.2rem;
+}
+header>ul>li:nth-child(1){
+    color: #ED5B00;
+}
+
+/* 底部内容 */
+footer{
+    height: 0.52rem;
+    border: 1px solid #f3f3f3;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 9;
+}
+footer .fo{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .fo>div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+footer .fo>div:hover span{
+    color: #e94544;
+}
+footer .fo>div>span{
+    font-size: 0.20rem;
+}
+footer>.fo>div:nth-child(1){
+    color: #e94544;
+}
+.cart-num{
+    width: 0.2rem;
+    height: 0.2rem;
+    background-color: #e94544;
+    border-radius: 50%;
+    position: absolute;
+    top: -8px;
+    left: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+/* 主题内容 */
+section{
+    margin-top: 0.4rem;
+}
+/* 轮播图部分 */
+section .tu{
+    width: 100%;
+    height: 1.8rem;
+    overflow: hidden;
+    position: relative;
+}
+.swiper{
+    width: 100%;
+}
+.swiper-slide img{
+    width: 100%;
+    height: 100%;
+}
+.swiper-pagination{
+    position: absolute;
+    bottom: 0.15rem;
+    left: 50%;
+}
+
+/* 中间部分 */
+.ro{
+    width: 90%;
+    margin: auto;
+    height: 1.8rem;
+    /* margin-top: 0.2rem; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.ro>div{
+    width: 0.6rem;
+    height: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+.ro>div>img{
+    width: 120%;
+    height: 100%;
+}
+
+/* 商品上面的图片 */
+.cell{
+    width: 100%;
+    height: 2.60rem;
+    display: flex;
+    justify-content: space-between;
+}
+.cell img{
+    width: 100%;
+    height: 100%;
+}
+.cell>.lef{
+    width: 48%;
+    height: 100%;
+}
+.cell>.rig{
+    width: 48%;
+    height: 100%;
+}
+.cell>.rig>img{
+    width: 100%;
+    height: 50%;
+}
+
+/* 商品内容 */
+.cart{
+    width: 94%;
+    /* height: 3rem; */
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cart>.cart-box{
+    width: 48%;
+    height: 2.6rem;
+    /* border: 1px solid #333; */
+    margin-bottom: 0.08rem;
+    text-align: center;
+}
+.cart>.cart-box>img{
+    width: 100%;
+    height: 60%;
+}
+.cart>.cart-box>.name{
+    font-size: 0.16rem;
+}
+.cart>.cart-box>.shows{
+    font-size: 0.12rem;
+    color: #0000008A;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden
+}
+.cart>.cart-box>.price{
+    font-size: 0.16rem;
+    color: #EA625B;
+}
+.cart>.cart-box>.mauto{
+    width: 1rem;
+    height: 0.28rem;
+    background-color: #EA625B;
+    color: #fff;
+    text-align: center;
+    line-height: 0.28rem;
+    margin: 0.05rem 0rem 0rem 0.3rem;
+}
+
+.completed{
+    width: 100%;
+    height: 0.6rem;
+    padding-bottom: 0.8rem;
+    color: #00000099;
+    font-size: 0.16rem;
+    text-align: center;
+    line-height: 0.6rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

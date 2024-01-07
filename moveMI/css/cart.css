@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,li{
+    list-style: none;
+}
+html,body{
+    /* 100px = 26.67vw = 1rem */
+    /* 使用rem为单位 */
+    font-size: 26.67vw;
+    overflow-x: hidden;
+}
+body{
+    font-size: 0.12rem;
+    background-color: #f3f3f3;
+}
+header{
+    height: 0.5rem;
+    width: 100%;
+    margin: auto; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 9;
+    background-color: #fff;
+}
+header>img{
+    width: 0.5rem;
+    height: 0.5rem;
+}
+header>p{
+    font-size: 0.14rem;
+    margin-right: 0.16rem;
+}
+
+section{
+
+    margin-top: 0.7rem;
+}
+section>.den{
+    width: 90%;
+    height: 0.66rem;
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+section>.den>p{
+    font-size: 0.16rem;
+    margin-left: 12px;
+}
+section>.den>div{
+    display: flex;
+    align-items: center;
+}
+section>.den>div>img{
+    width: 0.2rem;
+    height: 0.16rem;
+}
+.cart{
+    width: 90%;
+    margin: 0.2rem auto;
+    background-color: #fff;
+    border-radius: 0.1rem;
+}
+.tit{
+    width: 94%;
+    height: 0.4rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.tit>p{
+    font-size: 0.14rem;
+    margin-left: 0.1rem;
+}
+.tit>input{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+}
+input[type='checkbox']{
+    background-color: #fff;
+    -webkit-appearance:none;
+    border: 1px solid #C0C4CC;
+    /* border-radius: 2px; */
+    outline: none;
+}
+input[type=checkbox]:checked{
+    border: none;
+    background: url("../img/cart_checkbox_select_icon.png") no-repeat center;
+    background-size: contain;
+}
+.cart>.box{
+    width: 95%;
+    height: 1rem;
+    margin: auto;
+    padding: 0.1rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.cart>.box>input{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+}
+.cart>.box>.ri{
+    width: 70%;
+    height: 100%;
+    margin-left: 0.16rem;
+    display: flex;
+}
+.cart>.box>.ri>img{
+    width: 0.98rem;
+    height: 0.98rem;
+    margin-right: 0.15rem;
+}
+.cart>.box>.ri>.text{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.cart>.box>.ri>.text>p:nth-child(1){
+    font-size: 0.14rem;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.cart>.box>.ri>.text>p:nth-child(2){
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: rgb(107, 87, 87);
+}
+.cart>.box>.ri>.text>p:nth-child(3){
+    font-size: 0.16rem;
+    color: red;
+}
+.cart>.box>.num{
+    width: 1rem;
+    height: 0.3rem;
+
+    position: absolute;
+    bottom: 0.1rem;
+    right: 0.2rem;
+}
+.cart>.box>.num>button{
+    font-size: 0.16rem;
+    width: 0.3rem;
+    background-color: #f2f2f2;
+    border: none;
+}
+.cart>.box>.num>input{
+    width: 0.28rem;
+}
+
+
+
+/* 底部内容 */
+footer{
+    height: 0.52rem;
+    border: 1px solid #f3f3f3;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 9;
+}
+footer .fo{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .fo>.tet{
+   display: flex;
+   align-items: center;
+}
+footer .fo>.tet>p{
+    margin-left: 0.14rem;
+    font-size: 0.16rem;
+    color: #EA625B;
+}
+footer .fo>.billing{
+    width: 0.8rem;
+    height: 0.34rem;
+    border-radius: 10px;
+    font-size: 0.16rem;
+    text-align: center;
+    line-height: 0.34rem;
+    color: #fff;
+    background: linear-gradient(to right, rgb(255, 89, 52), rgb(255, 125, 0));
+}
+/* 购物车里没有内容 */
+.not{
+    margin: 0.5rem auto;
+    /* width: 1.5rem;
+    height: 1.7rem; */
+    text-align: center;
+    background-color: #f3f3f3;
+}
+.not>img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+
+.suggest{
+    position: relative;
+    margin-top: 1rem;
+}
+.suggest>h2{
+    position: absolute;
+    top: -45px;
+    left: 150px;
+}
+
+
+.cart-a{
+    width: 94%;
+    /* height: 3rem; */
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cart-a>.cart-box{
+    width: 48%;
+    height: 2.6rem;
+    /* border: 1px solid #333; */
+    margin-bottom: 0.08rem;
+    text-align: center;
+}
+.cart-a>.cart-box>img{
+    width: 100%;
+    height: 60%;
+}
+.cart-a>.cart-box>.name{
+    font-size: 0.16rem;
+}
+.cart-a>.cart-box>.shows{
+    font-size: 0.12rem;
+    color: #0000008A;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden
+}
+.cart-a>.cart-box>.price{
+    font-size: 0.16rem;
+    color: #EA625B;
+}
+.cart-a>.cart-box>.mauto{
+    width: 1rem;
+    height: 0.28rem;
+    background-color: #EA625B;
+    color: #fff;
+    text-align: center;
+    line-height: 0.28rem;
+    margin: 0.05rem 0rem 0rem 0.3rem;
+}
+
+/* 底部的管理 */
+.manage{
+    width: 90%;
+    height: 0.52rem;
+    margin: auto;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 9;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+.manage>.le{
+    width: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+.manage>.le>input{
+    width: 0.24rem;
+    height: 0.24rem;
+    border-radius: 50%;
+}
+.manage>.le>p{
+    font-size: 0.16rem;
+}
+.manage>.ig{
+    width: 0.9rem;
+    height: 0.34rem;
+    border: 1px solid #00000080;
+    border-radius: 0.14rem;
+    text-align: center;
+    line-height: 0.34rem;
+    font-size: 0.16rem;
+}
+.active{
+    display: block;
+    display: flex;
+}
+
+
+
+
+
+
+
